@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Quiz" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="???" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YAN-bY-g4A">
+                                <rect key="frame" x="195" y="177" width="25" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.94169463090000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gyP-IL-wTM">
+                                <rect key="frame" x="158" y="206" width="98" height="30"/>
+                                <state key="normal" title="Next Question">
+                                    <color key="titleColor" red="0.88235294119999996" green="0.34509803919999998" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="showNextQuestion:" destination="BYZ-38-t0r" eventType="touchUpInside" id="86u-n1-VMU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SZO-0Z-QeB">
+                                <rect key="frame" x="161" y="307" width="93" height="30"/>
+                                <state key="normal" title="Show Answer">
+                                    <color key="titleColor" red="0.88235294119999996" green="0.34509803919999998" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="showAnswer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FQ6-7X-Dds"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="???" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nKe-WU-hKe">
+                                <rect key="frame" x="195" y="286" width="25" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.94169463090000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Your Answer:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5mZ-Pa-FHa">
+                                <rect key="frame" x="135" y="248" width="144" height="30"/>
+                                <color key="textColor" red="0.88235294119999996" green="0.34509803919999998" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="answerFieldEditingChange:" destination="BYZ-38-t0r" eventType="editingChanged" id="gVz-oO-ZqU"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AOb-dH-IBc" userLabel="check Answer Label">
+                                <rect key="frame" x="287" y="247" width="96" height="32"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="AOb-dH-IBc" firstAttribute="centerY" secondItem="5mZ-Pa-FHa" secondAttribute="centerY" id="4RJ-LQ-4Kh"/>
+                            <constraint firstItem="SZO-0Z-QeB" firstAttribute="centerX" secondItem="gyP-IL-wTM" secondAttribute="centerX" id="6I6-Ov-IFC"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="AOb-dH-IBc" secondAttribute="trailing" constant="11" id="8Mo-jh-M2R"/>
+                            <constraint firstItem="YAN-bY-g4A" firstAttribute="centerX" secondItem="gyP-IL-wTM" secondAttribute="centerX" id="9Yl-Zq-h7g"/>
+                            <constraint firstItem="SZO-0Z-QeB" firstAttribute="top" secondItem="nKe-WU-hKe" secondAttribute="bottom" id="BzW-Aa-ZUe"/>
+                            <constraint firstItem="nKe-WU-hKe" firstAttribute="centerX" secondItem="gyP-IL-wTM" secondAttribute="centerX" id="Gm3-lW-MVR"/>
+                            <constraint firstItem="5mZ-Pa-FHa" firstAttribute="centerX" secondItem="gyP-IL-wTM" secondAttribute="centerX" id="ImR-hb-kAf"/>
+                            <constraint firstItem="AOb-dH-IBc" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="227" id="LE1-tl-o16"/>
+                            <constraint firstItem="YAN-bY-g4A" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="157" id="S2C-0x-dRb"/>
+                            <constraint firstItem="YAN-bY-g4A" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="b1h-aj-dyY"/>
+                            <constraint firstItem="5mZ-Pa-FHa" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="115" id="dut-qa-93g"/>
+                            <constraint firstItem="5mZ-Pa-FHa" firstAttribute="top" secondItem="gyP-IL-wTM" secondAttribute="bottom" constant="12" id="fKH-4w-L1B"/>
+                            <constraint firstItem="gyP-IL-wTM" firstAttribute="top" secondItem="YAN-bY-g4A" secondAttribute="bottom" constant="8" id="fm9-o4-y4B"/>
+                            <constraint firstItem="nKe-WU-hKe" firstAttribute="top" secondItem="5mZ-Pa-FHa" secondAttribute="bottom" constant="8" symbolic="YES" id="na9-Qd-8sd"/>
+                            <constraint firstItem="AOb-dH-IBc" firstAttribute="leading" secondItem="5mZ-Pa-FHa" secondAttribute="trailing" constant="8" id="pBI-xz-wQ0"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="kng-p5-nSB" appends="YES" id="Gjs-iE-fpi"/>
+                        </connections>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <outlet property="answerLabel" destination="nKe-WU-hKe" id="hTR-Hn-FxD"/>
+                        <outlet property="answerTextField" destination="5mZ-Pa-FHa" id="Zi1-Gu-35c"/>
+                        <outlet property="checkAnswerLabel" destination="AOb-dH-IBc" id="C7H-UR-AfD"/>
+                        <outlet property="questionLabel" destination="YAN-bY-g4A" id="P5E-ux-wyi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="kng-p5-nSB">
+                    <connections>
+                        <action selector="dismissKeyboard:" destination="BYZ-38-t0r" id="R90-Re-1AF"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="223" y="290"/>
+        </scene>
+    </scenes>
+</document>
